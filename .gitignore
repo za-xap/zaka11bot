@@ -2,6 +2,7 @@
 *.log
 *.lock
 config.py
+config.cpython-36.pyc
 
 #ignoring autorun script 
 *autorun.sh
