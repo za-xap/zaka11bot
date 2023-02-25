@@ -23,7 +23,12 @@ def text(message):
         none = None
         if message.from_user.last_name is not none:
             bot.send_message(message.from_user.id, "Привіт, {mention}!\nЯ <b>{1.first_name}</b>, подивись мої команди.".format(message.from_user, bot.get_me(), mention = f'<a href="tg://user?id={message.from_user.id}">{message.from_user.first_name} {message.from_user.last_name}</a>'), parse_mode="HTML", reply_markup=types.ReplyKeyboardRemove())
-            file = open("user.log")
+	    try:
+		file = open("user.log")
+	    except IOError:
+		file = open("user.log", "w")
+		file.close()
+		file = open("user.log")
             string = file.read()
             search_word = str(message.from_user.id)
             if (search_word in string):
@@ -104,7 +109,7 @@ def text(message):
 def location(message):
  try:
     if message.location is not None:
-        adm  = (50.058462, 36.295533)
+        adm  = (50.05920, 36.28530)
         us  = (message.location.latitude, message.location.longitude)
         bot.send_message(message.from_user.id, "Адмін знаходиться від цієї точки в {d} кілометрах".format(d = round(geodesic(adm, us).km, 1)), parse_mode="HTML", reply_markup=types.ReplyKeyboardRemove())
  except BaseException:
