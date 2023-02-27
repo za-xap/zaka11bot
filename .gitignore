@@ -2,7 +2,9 @@
 *.log
 *.lock
 config.py
+/__pycache__
 config.cpython-36.pyc
+/zaka11bot
 
 #ignoring autorun script 
 *autorun.sh
