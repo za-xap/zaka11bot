@@ -1,6 +1,6 @@
 # zaka11bot
 ### 🤖 Telegram bot with a few different strange features. 🤨🙃
-_I created this bot for testing some Telegram features like parsing, logging, calculating distance etc._
+_I created this bot for testing some Telegram features and others like parsing, logging, calculating distance etc._
 
 **You can test it on Telegram - [@zaka11bot](https://t.me/zaka11bot "test 🇺🇦").**
 
