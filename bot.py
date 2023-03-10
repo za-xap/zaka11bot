@@ -54,18 +54,17 @@ def text(message):
         bot.send_message(message.from_user.id, "Напиши привіт")
     elif message.text == "go" or message.text == "Go":
         bot.send_message(message.from_user.id, 'Go, go, go!')
-    elif message.text == "CS" or message.text == "cs" or message.text == "Cs" or message.text == "/cs":
-        url = 'https://steamcommunity.com/id/za_xap/games/?tab=all'
+    elif message.text == "H" or message.text == "h" or message.text == "/h":
+        url = 'https://steamcommunity.com/id/Za_XaP'
         r = requests.get(url)
         soup = BeautifulSoup(r.content, features="lxml")
-        i = soup.find_all('script')
-        i = str(i)
-        n = i.find('hours_forever')
-        i = i[n+16]+i[n+18]+i[n+19]+i[n+20]
+        i = soup.find("div", {"class": "game_info_details"}).get_text()
+        i = i.split("\r\n\t\t\t\t\t\t\t\t\t\t\t")
+        i = i[1].split(" ")
+        i = i[0]
         if "," in i:
-            i = i[n+16]+i[n+17]+i[n+19]+i[n+20]+i[n+21]
-        else:
-            bot.send_message(message.from_user.id, "Admin has {} hours in CS:GO".format(i))
+            i = i.replace(",", "")
+        bot.send_message(message.from_user.id, "Admin has {} hours in the last game".format(i))
     elif message.text == "/time" or message.text == "time":
         now = datetime.now()
         bot.send_message(message.from_user.id, "UTC - " + now.strftime("%H:%M:%S"), reply_markup=types.ReplyKeyboardRemove())
