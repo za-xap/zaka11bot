@@ -6,5 +6,8 @@ config.py
 config.cpython-36.pyc
 /zaka11bot
 
+#ignoring PyCharm files on Windows
+/.idea
+
 #ignoring autorun script 
 *autorun.sh
