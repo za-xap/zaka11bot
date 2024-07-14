@@ -1,8 +1,9 @@
-# [zaka11bot](https://t.me/zaka11bot "test 🇺🇦")
+# zaka11bot
 ### 🤖 Telegram bot with a few different strange features. 🤨🙃
 _I created this bot for testing some Telegram features and others like parsing, logging, calculating distance etc._
 
-**You can test it on Telegram - [@zaka11bot](https://t.me/zaka11bot "test 🇺🇦").**
+~~You can test it in Telegram - [@zaka11bot](https://t.me/zaka11bot "test 🇺🇦").~~  
+**Bot is no longer available by this username.**
 
 ---
 
